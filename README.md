@@ -1,6 +1,5 @@
 # Description
-This is a slightly modified version of LeNet which has been trained on the CIFAR-10 dataset. The model has been trained for 40 epochs on a laptop gpu and has a accuracy of 74%. Because this is sort of a demo but still a useable model I have not written the most optimal python code or use case (In case anyone finds their way here).
-
+This is a slightly modified version of LeNet which has been trained on the CIFAR-10 dataset. The model has been trained for 40 epochs on a laptop gpu and has a accuracy of 74%. Because this is sort of a demo but still a useable model I have not written the most optimal python code or use case (In case anyone finds their way here). Before I knew about adaptive learning I have implemented my own version here. In short the learning rate will change depending on the accuracy of every epoch.
 # Using the modes
 Install the dependencies the requirements.txt file.
 ```
@@ -28,5 +27,8 @@ Open the file and rename the <b>imageName<b/> variable to one of the classes lis
   ```
   python simpleNet.py
   ```
+ # How the adaptive learning rate works in this model
+ The accuracy of each epoch is stored in a que, as the new accuracies come in the que is updated to always contain two values, the current accuracy and the previous accuracy. The learning rate is updated accordingly by either decreasing or increasing this rate depending on the accuracy. If the accuracies are the same the model will "vote" by generating a array of ten binary digit randomly. If the sum is greater than five the learning rate will increase, if less than five the learning rate will decrease and if it is the same the learning rate will reset to default and the model will start learning again. As we can see below it takes less epochs to get to the same accuracy without. 
  
+ ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
   
