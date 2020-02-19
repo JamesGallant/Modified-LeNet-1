@@ -1,6 +1,6 @@
 # Description
 This is a slightly modified version of LeNet which has been trained on the CIFAR-10 dataset. The model has been trained for 40 epochs on a laptop gpu and has a accuracy of 74%. Because this is sort of a demo but still a useable model I have not written the most optimal python code or use case (In case anyone finds their way here). Before I knew about adaptive learning I have implemented my own version here. In short the learning rate will change depending on the accuracy of every epoch.
-# Using the modes
+# Using the models
 Install the dependencies the requirements.txt file.
 ```
 pip install -r requirements.txt
@@ -22,7 +22,7 @@ The image classes by index of CIFAR-10 is:
 ```
 In the folder named CIFAR_hires is a sample of an image that I randomly got from the internet to check if the model works. This is where the usage becomes bulky...
 
-Open the file and rename the <b>imageName<b/> variable to one of the classes listed above and leave the extension, eg. plane.jpg, or horse.jpg and call the script.  To retrain this model change the <b>TRAIN<b/> and <b>DynamicLearning<b/> value to True.
+Open the file and rename the imageName variable to one of the classes listed above and leave the extension, eg. plane.jpg, or horse.jpg and call the script. To retrain this model change the TRAIN and DynamicLearning value to True.
 
   ```
   python simpleNet.py
