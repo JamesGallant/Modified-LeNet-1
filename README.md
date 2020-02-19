@@ -28,7 +28,8 @@ Open the file and rename the <b>imageName<b/> variable to one of the classes lis
   python simpleNet.py
   ```
  # How the adaptive learning rate works in this model
- The accuracy of each epoch is stored in a que, as the new accuracies come in the que is updated to always contain two values, the current accuracy and the previous accuracy. The learning rate is updated accordingly by either decreasing or increasing this rate depending on the accuracy. If the accuracies are the same the model will "vote" by generating a array of ten binary digit randomly. If the sum is greater than five the learning rate will increase, if less than five the learning rate will decrease and if it is the same the learning rate will reset to default and the model will start learning again. As we can see below it takes less epochs to get to the same accuracy without. 
+ The accuracy of each epoch is stored in a que, as the new accuracies come in the que is updated to always contain two values, the current accuracy and the previous accuracy. The learning rate is updated accordingly by either decreasing or increasing this rate depending on the accuracy. If the accuracies are the same the model will "vote" by generating a array of ten binary digit randomly. If the sum is greater than five the learning rate will increase, if less than five the learning rate will decrease and if it is the same the learning rate will reset to default and the model will start learning again. As we can see below it takes less epochs to get to the same accuracy without, which I thought was pretty cool. Next would be to increase the complexity of the network. On the same number of epochs 80% can be achieved.
  
- ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+ ![Image of accuracy](https://github.com/JamesGallant/Modified-LeNet-1/blob/master/images/CIFAR10%20accuracy.png)
+
   
